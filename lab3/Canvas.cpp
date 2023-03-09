@@ -32,13 +32,20 @@ void Canvas::Clear() {
 }
 
 void Canvas::Print() {
+	for (int i = 0; i < m_width + 2; ++i) {
+		std::cout << "-";
+	}
+	std::cout << "\n";
 	for (int i = 0; i < m_height; ++i) {
-		std::cout << m_matrix[i];
-		std::cout << '\n';
+		std::cout << "\|" << m_matrix[i] << "\|\n";
 		//ne am asigurat ca niciodata n o sa fie
 		//vreun null unde nu trebuie
 		//prin SetPoint, initializare, si Clear
 	}
+	for (int i = 0; i < m_width + 2; ++i) {
+		std::cout << "-";
+	}
+	std::cout << "\n";
 }
 
 void Canvas::FillRect(int left, int top, int right, int bottom, char ch) {
@@ -57,5 +64,11 @@ void Canvas::DrawRect(int left, int top, int right, int bottom, char ch) {
 	for (int i = top + 1; i < bottom; ++i) {
 		SetPoint(left, i, ch);
 		SetPoint(right, i, ch);
+	}
+}
+
+void Canvas::DrawLine(int x1, int y1, const int x2, const int y2, const char ch) {
+	if (!CheckPoint(x1, y1) && !CheckPoint(x2, y2)) {
+		return;
 	}
 }
