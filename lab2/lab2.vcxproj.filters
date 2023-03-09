@@ -18,7 +18,7 @@
     <ClCompile Include="src\Globals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\main.cpp">
+    <ClCompile Include="src\lab2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\NumberList.cpp">

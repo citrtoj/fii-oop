@@ -4,7 +4,7 @@
 
 int main()
 {
-    std::cout << "NumberList\n";
+    std::cout << "NumberList \n";
     NumberList lista;
     lista.Init();
     lista.Add(5);
@@ -29,5 +29,6 @@ int main()
     Ion.SetName("Ion");
     Ion.SetGradeMath(10.0);
     std::cout << CompareName(Maria, Ion) << " <- name compare; average compare -> " << CompareAverage(Maria, Ion);
+    int x; std::cin >> x;
     return 0;
 }

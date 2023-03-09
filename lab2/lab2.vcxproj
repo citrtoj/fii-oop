@@ -99,7 +99,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Globals.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\lab2.cpp" />
     <ClCompile Include="src\NumberList.cpp" />
     <ClCompile Include="src\Student.cpp" />
   </ItemGroup>

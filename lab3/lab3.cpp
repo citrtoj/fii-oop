@@ -1,6 +1,11 @@
-
 #include <iostream>
 
 int main() {
-    std::cout << "Hello World!\n";
+    int x;
+
+
+
+
+    std::cin >> x;
+    return 0;
 }
