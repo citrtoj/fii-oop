@@ -20,9 +20,11 @@ bool Canvas::CheckPoint(int x, int y) {
 }
 void Canvas::SetPoint(int x, int y, char ch) {
 	if (ch == '\0') return;
-	if (CheckPoint(x, y)) {
-		m_matrix[x][y] = ch;
+	if (!CheckPoint(x, y)) {
+		std::cout << "not suited";
+		return;
 	}
+	m_matrix[y][x] = ch;
 }
 
 void Canvas::Clear() {
@@ -34,17 +36,21 @@ void Canvas::Clear() {
 
 void Canvas::Print() {
 	for (int i = 0; i < m_width + 2; ++i) {
-		std::cout << "-";
+		std::cout << "--";
 	}
 	std::cout << "\n";
 	for (int i = 0; i < m_height; ++i) {
-		std::cout << "\|" << m_matrix[i] << "\|\n";
+		std::cout << "| ";
+		for (int j = 0; j < m_width; ++j) {
+			std::cout << m_matrix[i][j] << " ";
+		}
+		std::cout << "|\n";
 		//ne am asigurat ca niciodata n o sa fie
 		//vreun null unde nu trebuie
 		//prin SetPoint, initializare, si Clear
 	}
 	for (int i = 0; i < m_width + 2; ++i) {
-		std::cout << "-";
+		std::cout << "--";
 	}
 	std::cout << "\n";
 }
@@ -114,15 +120,60 @@ void Canvas::PlotLineHigh(int x0, int y0, int x1, int y1, char ch) {
 
 
 void Canvas::DrawLine(int x0, int y0, int x1, int y1, char ch) {
-	if (!CheckPoint(x1, y1) && !CheckPoint(x2, y2)) {
+	if (!CheckPoint(x1, y1) && !CheckPoint(x0, y0)) {
 		return;
 	}
 	if (abs(y1 - y0) < abs(x1 - x0)) {
 		if (x0 > x1) {
-			PlotLineLow(x1, y1, x0, y0);
+			PlotLineLow(x1, y1, x0, y0, ch);
 		}
 		else {
-			PlotLineLow(x0, y0, x1, y1);
+			PlotLineLow(x0, y0, x1, y1, ch);
 		}
+	}
+	else {
+		if (y0 > y1) {
+			PlotLineHigh(x1, y1, x0, y0, ch);
+		}
+		else {
+			PlotLineHigh(x0, y0, x1, y1, ch);
+		}
+	}
+}
+
+void Canvas::DrawCircleUtil(int x0, int y0, int x, int y, char ch) {
+	SetPoint(x0 + x, y0 + y, ch);
+	SetPoint(x0 - x, y0 + y, ch);
+	SetPoint(x0 + x, y0 - y, ch);
+	SetPoint(x0 - x, y0 - y, ch);
+	SetPoint(x0 + y, y0 + x, ch);
+	SetPoint(x0 - y, y0 + x, ch);
+	SetPoint(x0 + y, y0 - x, ch);
+	SetPoint(x0 - y, y0 - x, ch);
+}
+
+void Canvas::DrawCircle(int x0, int y0, int r, char ch) {
+	int x = 0;
+	int y = r;
+	int d = 3 - 2 * r;
+	DrawCircleUtil(x0, y0, x, y, ch);
+	while (y >= x) {
+		x++;
+		if (d > 0) {
+			y--;
+			d = d + 4 * (x - y) + 10;
+		}
+		else {
+			d = d + 4 * x + 6;
+		}
+		DrawCircleUtil(x0, y0, x, y, ch);
+	}
+}
+
+void Canvas::FillCircle(int x0, int y0, int r, char ch) {
+	for (int x = -r; x < r; x++) {
+		int height = (int)sqrt(r * r - x * x);
+		for (int y = -height; y < height; y++)
+			SetPoint(x0 + x, y0 + y, ch);
 	}
 }
