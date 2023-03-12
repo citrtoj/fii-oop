@@ -7,7 +7,9 @@ class Canvas
     char** m_matrix;
     int m_width, m_height;
     bool CheckPoint(int x, int y);
-
+private:
+    void PlotLineLow(int x0, int x1, int y0, int y1, char ch);
+    void PlotLineHigh(int x0, int x1, int y0, int y1, char ch);
 public:
     Canvas(int width, int height);
     void DrawCircle(int x, int y, int ray, char ch);
