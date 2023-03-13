@@ -52,35 +52,20 @@ void Sort::InsertSort(bool ascendent) {
     for (size_t i = 1; i < m_count; ++i) {
         size_t j = i - 1;
         int element = m_arr[i];
-        if (!ascendent) {
-            while (m_arr[j] > element && j >= 0) {
-                m_arr[j + 1] = m_arr[j];
-                --j;
-            }
-            m_arr[j + 1] = element;
+        while ( ( (m_arr[j] > element) == !ascendent) && j >= 0) {
+            m_arr[j + 1] = m_arr[j];
+            --j;
         }
-        else {
-            while (m_arr[j] < element && j >= 0) {
-                m_arr[j + 1] = m_arr[j];
-                --j;
-            }
-            m_arr[j + 1] = element;
-        }
+        m_arr[j + 1] = element;
+        
     }
 }
 
 void Sort::BubbleSort(bool ascendent) {
     for (size_t i = 0; i < m_count - 1; ++i) {
         for (int j = 0; j < m_count - i - 1; ++j) {
-            if (!ascendent) {
-                if (m_arr[j] > m_arr[j + 1]) {
-                    std::swap(m_arr[j], m_arr[j + 1]);
-                }
-            }
-            else {
-                if (m_arr[j] < m_arr[j + 1]) {
-                    std::swap(m_arr[j], m_arr[j + 1]);
-                }
+            if ( (m_arr[j] > m_arr[j + 1] ) == !ascendent) {
+                std::swap(m_arr[j], m_arr[j + 1]);
             }
         }
     }
@@ -91,21 +76,10 @@ int Sort::Partition(int low, int high, bool ascendent) {
     std::swap(m_arr[pivotIndex], m_arr[high]);
     const auto pivot = m_arr[high];
     int i = low - 1;
-    for (int j = low; j < high; ++j)
-    {
-        if (!ascendent) {
-            if (m_arr[j] <= pivot)
-            {
-                i++;
-                std::swap(m_arr[i], m_arr[j]);
-            }
-        }
-        else {
-            if (m_arr[j] <= pivot)
-            {
-                i++;
-                std::swap(m_arr[i], m_arr[j]);
-            }
+    for (int j = low; j < high; ++j) {
+        if ((m_arr[j] <= pivot) == !ascendent) {
+            i++;
+            std::swap(m_arr[i], m_arr[j]);
         }
     }
     std::swap(m_arr[i + 1], m_arr[high]);
