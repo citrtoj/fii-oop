@@ -16,8 +16,8 @@ int main() {
 	list2.Print();
 	std::cout << "\n\n";
 
-	int v[] = {23, 11, 6, 87, 2323, 121};
-	Sort list3(v, 6);
+	char v[] = "10,20,40,5";
+	Sort list3(v);
 	list3.Print();
 	list3.BubbleSort();
 	list3.Print();

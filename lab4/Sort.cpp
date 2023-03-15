@@ -41,12 +41,29 @@ int Sort::MyAtoi(const char* text) {
 }
 
 Sort::Sort(const char* text) : m_count(0), m_arr(0) {
-    //TODO!
+    int* temp_arr = new int[(strlen(text) + 1) / 2]; //maximu
+    int i = 0;
+    int current_nr = 0;
+    while (i < strlen(text)) {
+        if (text[i] == ',') {
+            temp_arr[m_count] = current_nr;
+            m_count++;
+            current_nr = 0;
+            ++i;
+        }
+        current_nr = current_nr * 10 + text[i] - '0';
+        ++i;
+    }
+    temp_arr[m_count] = current_nr;
+    m_count++;
+    m_arr = new int[m_count];
+    for (int i = 0; i < m_count; ++i) {
+        m_arr[i] = temp_arr[i];
+    }
+    delete[] temp_arr;
 }
 
-Sort::Sort(...) {
-    //TODO!
-}
+Sort::Sort(...) : m_count(0), m_arr(0) {}
 
 void Sort::InsertSort(bool ascendent) {
     for (size_t i = 1; i < m_count; ++i) {
@@ -87,8 +104,7 @@ int Sort::Partition(int low, int high, bool ascendent) {
 }
 
 void Sort::QuickSortUtil(int low, int high, bool ascendent) {
-    if (low < high)
-    {
+    if (low < high) {
         const auto pivot = Partition(low, high, ascendent);
         QuickSortUtil(low, pivot - 1, ascendent);
         QuickSortUtil(pivot + 1, high, ascendent);

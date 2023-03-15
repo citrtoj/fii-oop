@@ -27,13 +27,18 @@ int main() {
 	printf("%d", sum);
 
 	//ex 3
-	//char** words = new char* [256]();
+	char words[128][256] = { 0 };
 	if (scanf("%s", buffer)) {
 		char* p;
 		int n = 0;
 		p = strtok(buffer, " ");
 		while (p) {
-			//TODO
+			if (n == 0) {
+				strcpy(words[0], p);
+			}
+			else {
+				//insertion sort
+			}
 		}
 	}
 	else {
