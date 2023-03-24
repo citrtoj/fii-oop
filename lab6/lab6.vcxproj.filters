@@ -27,6 +27,15 @@
     <ClCompile Include="Circuit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Mazda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mercedes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Toyota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Car.h">

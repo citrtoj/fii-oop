@@ -8,7 +8,7 @@ unsigned int Dacia::FuelCapacity() const {
 	return m_fuelCapacity;
 }
 
-unsigned int Dacia::FuelConsumption() const {
+double Dacia::FuelConsumption() const {
 	return m_fuelConsumption;
 }
 

@@ -3,10 +3,10 @@
 
 class Ford final : public Car {
 public:
-	Ford() : Car(2100, 30, 200) {};
+	Ford() : Car(42, 4.6, 194) {};
 private:
 	virtual const char* Name() const override;
 	virtual unsigned int FuelCapacity() const override;
-	virtual unsigned int FuelConsumption() const override;
+	virtual double FuelConsumption() const override;
 	virtual unsigned int Speed(Weather weather) const override;
 };

@@ -131,6 +131,9 @@
     <ClCompile Include="Dacia.cpp" />
     <ClCompile Include="Ford.cpp" />
     <ClCompile Include="lab6.cpp" />
+    <ClCompile Include="Mazda.cpp" />
+    <ClCompile Include="Mercedes.cpp" />
+    <ClCompile Include="Toyota.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Car.h" />

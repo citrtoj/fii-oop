@@ -8,7 +8,7 @@ unsigned int Ford::FuelCapacity() const {
 	return m_fuelCapacity;
 }
 
-unsigned int Ford::FuelConsumption() const {
+double Ford::FuelConsumption() const {
 	return m_fuelConsumption;
 }
 
