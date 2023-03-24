@@ -21,7 +21,7 @@ Number::Number(long long number, int base) : m_base(base), m_length(1), m_number
 	//std::cout << "[calling long long constructor...]\n";
 	if (number != 0) {
 		long long tmp = number;
-		while (tmp > base) {
+		while (tmp >= base) {
 			tmp /= base;
 			m_length++;
 		}
@@ -85,8 +85,9 @@ Number& Number::operator=(Number&& mv) noexcept {
 	//std::cout << "[calling move assignment...]\n";
 	m_base = mv.m_base;
 	m_length = mv.m_length;
+	char* tmp = m_number;
 	m_number = mv.m_number;
-	mv.m_number = nullptr;
+	mv.m_number = tmp;
 	return (*this);
 }
 
