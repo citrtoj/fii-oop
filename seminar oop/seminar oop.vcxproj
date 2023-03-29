@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{691b9d65-9853-4e4d-80a7-d1e5f1d73059}</ProjectGuid>
-    <RootNamespace>lab6</RootNamespace>
+    <ProjectGuid>{426e8943-e674-49df-bed6-8c8c990c342d}</ProjectGuid>
+    <RootNamespace>seminaroop</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,23 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Circuit.cpp" />
-    <ClCompile Include="Volvo.cpp" />
-    <ClCompile Include="BMW.cpp" />
-    <ClCompile Include="lab6.cpp" />
-    <ClCompile Include="Seat.cpp" />
-    <ClCompile Include="RangeRover.cpp" />
-    <ClCompile Include="Fiat.cpp" />
+    <ClCompile Include="seminar oop.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Car.h" />
-    <ClInclude Include="Circuit.h" />
-    <ClInclude Include="Volvo.h" />
-    <ClInclude Include="BMW.h" />
-    <ClInclude Include="Seat.h" />
-    <ClInclude Include="RangeRover.h" />
-    <ClInclude Include="Fiat.h" />
-    <ClInclude Include="Weather.h" />
+    <ClInclude Include="Header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

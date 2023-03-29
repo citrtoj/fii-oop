@@ -18,22 +18,22 @@
     <ClCompile Include="lab6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Dacia.cpp">
+    <ClCompile Include="Volvo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ford.cpp">
+    <ClCompile Include="BMW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Circuit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Mazda.cpp">
+    <ClCompile Include="Seat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Mercedes.cpp">
+    <ClCompile Include="RangeRover.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Toyota.cpp">
+    <ClCompile Include="Fiat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,19 +44,19 @@
     <ClInclude Include="Weather.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dacia.h">
+    <ClInclude Include="Volvo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Toyota.h">
+    <ClInclude Include="Fiat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Mazda.h">
+    <ClInclude Include="Seat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Mercedes.h">
+    <ClInclude Include="RangeRover.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ford.h">
+    <ClInclude Include="BMW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Circuit.h">

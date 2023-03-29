@@ -1,18 +1,18 @@
-#include "Ford.h"
+#include "BMW.h"
 
-const char* Ford::Name() const {
-	return "Ford";
+const char* BMW::Name() const {
+	return "BMW";
 }
 
-unsigned int Ford::FuelCapacity() const {
+unsigned int BMW::FuelCapacity() const {
 	return m_fuelCapacity;
 }
 
-double Ford::FuelConsumption() const {
+double BMW::FuelConsumption() const {
 	return m_fuelConsumption;
 }
 
-unsigned int Ford::Speed(Weather weather) const {
+unsigned int BMW::Speed(Weather weather) const {
 	switch (weather) {
 	case Weather::Sunny:
 		return m_maxSpeed;

@@ -1,9 +1,9 @@
 #pragma once
 #include "Car.h"
 
-class Dacia final : public Car {
+class Seat final : public Car {
 public:
-	Dacia() : Car(50, 6.6, 180) {};
+	Seat() : Car(35, 3.4, 172) {};
 private:
 	virtual const char* Name() const override;
 	virtual unsigned int FuelCapacity() const override;

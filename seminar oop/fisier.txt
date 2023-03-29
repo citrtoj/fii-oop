@@ -1,0 +1,11 @@
+scriem
+
+
+sunt in constructor Baza
+sunt in constructor Derivat
+sunt in Calcul Derivat
+80
+sunt in constructor Baza
+sunt in constructor Derivat
+sunt in Calcul Baza
+15

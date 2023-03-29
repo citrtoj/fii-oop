@@ -1,18 +1,18 @@
-#include "Mazda.h"
+#include "Seat.h"
 
-const char* Mazda::Name() const {
-	return "Mazda";
+const char* Seat::Name() const {
+	return "Seat";
 }
 
-unsigned int Mazda::FuelCapacity() const {
+unsigned int Seat::FuelCapacity() const {
 	return m_fuelCapacity;
 }
 
-double Mazda::FuelConsumption() const {
+double Seat::FuelConsumption() const {
 	return m_fuelConsumption;
 }
 
-unsigned int Mazda::Speed(Weather weather) const {
+unsigned int Seat::Speed(Weather weather) const {
 	switch (weather) {
 	case Weather::Sunny:
 		return m_maxSpeed;

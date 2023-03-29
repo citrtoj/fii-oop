@@ -1,18 +1,18 @@
-#include "Dacia.h"
+#include "Volvo.h"
 
-const char* Dacia::Name() const {
-	return "Dacia";
+const char* Volvo::Name() const {
+	return "Volvo";
 }
 
-unsigned int Dacia::FuelCapacity() const {
+unsigned int Volvo::FuelCapacity() const {
 	return m_fuelCapacity;
 }
 
-double Dacia::FuelConsumption() const {
+double Volvo::FuelConsumption() const {
 	return m_fuelConsumption;
 }
 
-unsigned int Dacia::Speed(Weather weather) const {
+unsigned int Volvo::Speed(Weather weather) const {
 	switch (weather) {
 	case Weather::Sunny:
 		return m_maxSpeed;

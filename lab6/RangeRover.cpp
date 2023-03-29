@@ -1,18 +1,18 @@
-#include "Mercedes.h"
+#include "RangeRover.h"
 
-const char* Mercedes::Name() const {
-	return "Mercedes";
+const char* RangeRover::Name() const {
+	return "RangeRover";
 }
 
-unsigned int Mercedes::FuelCapacity() const {
+unsigned int RangeRover::FuelCapacity() const {
 	return m_fuelCapacity;
 }
 
-double Mercedes::FuelConsumption() const {
+double RangeRover::FuelConsumption() const {
 	return m_fuelConsumption;
 }
 
-unsigned int Mercedes::Speed(Weather weather) const {
+unsigned int RangeRover::Speed(Weather weather) const {
 	switch (weather) {
 	case Weather::Sunny:
 		return m_maxSpeed;
