@@ -1,6 +1,6 @@
-#include "Header.h"
 
-A* A::instance = 0;
+
+/*A* A::instance = 0;
 
 A::A() : path("") {}
 
@@ -66,3 +66,4 @@ Derivat::~Derivat() {
 
 	A::GetInstance()->Write("sunt in destructor Derivat\n");
 }
+*/

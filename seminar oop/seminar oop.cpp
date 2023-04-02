@@ -1,7 +1,17 @@
 #include "Header.h"
 #pragma warning(disable: 4996)
 int main() {
-    A* instancePointer = A::GetInstance();
+
+    Test* t = new Test;
+    Test* y = new Test;
+
+    Test** testArray = new Test* [2];
+    testArray[0] = t;
+    testArray[1] = y;
+
+    delete[] testArray;
+
+    /*A* instancePointer = A::GetInstance();
     instancePointer->ChangePath("Fisier.txt");
     instancePointer->Write("scriem\n\n\n");
 
@@ -20,7 +30,7 @@ int main() {
 
     delete bazaPointer; //dtor baza
 
-    //instancePointer->DestroyInstance();
+    //instancePointer->DestroyInstance();*/
 
 }
 //dtor Derivat; dtor Baza;

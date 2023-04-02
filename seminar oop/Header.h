@@ -1,9 +1,18 @@
 #pragma once
 #include <string>
 #include <algorithm>
-#include <fstream>
+#include <iostream>
 
-class A {
+class Test {
+public:
+	Test() {}
+	~Test() {
+		std::cout << "calling dtor\n";
+	};
+};
+
+
+/*class A {
 private:
 	A();
 	~A();
@@ -32,4 +41,4 @@ public:
 	~Derivat();
 	void Calcul();
 	int Get();
-};
+};*/
