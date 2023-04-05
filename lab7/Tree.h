@@ -93,7 +93,7 @@ public:
 	}
 
 	TreeNode<T>* Find(const T& value, bool(*equals)(const T& lhs, const T& rhs) = nullptr) {
-		if ( (equals != nullptr && equals(Data(), value)) || Data() == value) { //cursed, I know. it uses short circuiting though which i really really really wanted to use in a cool way at least once in my life
+		if ( (equals != nullptr && equals(Data(), value)) || (equals == nullptr && Data() == value)) {
 			return this;
 		}
 		else {
