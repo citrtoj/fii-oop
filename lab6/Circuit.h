@@ -28,11 +28,6 @@ private:
 	void sortFinishedCars();
 public:
 	Circuit();
-	//none of these might be necessary, since it's all static arrays
-	//~Circuit();
-	//Circuit& operator=(const Circuit&)
-	//Circuit(const Circuit&& mv)
-	//Circuit(const Circuit&  cp)
 	void SetLength(unsigned int length);
 	void SetWeather(Weather weather);
 	void AddCar(Car* car);

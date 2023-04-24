@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{426e8943-e674-49df-bed6-8c8c990c342d}</ProjectGuid>
-    <RootNamespace>seminaroop</RootNamespace>
+    <ProjectGuid>{c83e3555-b00c-4d50-b6bd-bca54f6c2594}</ProjectGuid>
+    <RootNamespace>lab8</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="seminar oop.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="lab8.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
+    <Text Include="input.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
