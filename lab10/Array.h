@@ -289,7 +289,7 @@ public:
 
 	void Sort(int(*compare)(const T&, const T&)) {
 		std::sort(begin(), end(), [](const auto a, const auto b) {
-			return (compare(a, b) < 0);
+			return (compare(&a, &b) < 0); //un pic cursed, ca facem de-referentiere de la iterator, apoi referentiere prin &a, apoi dereferentiere in compare. Dar na
 			});
 	}
 
