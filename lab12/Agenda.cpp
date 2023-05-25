@@ -3,7 +3,7 @@
 std::vector<Contact*> Agenda::GetPrieteni() const {
 	std::vector<Contact*> prieteni;
 	for (auto c : contacte) {
-		if (c->GetTip() == "Prieten") {
+		if (c->GetTip() == ContactType::PrietenType) {
 			prieteni.push_back(c);
 		}
 	}

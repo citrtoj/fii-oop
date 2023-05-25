@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Agenda.h"
-#include "ContactTypes.h" //stiu ca trebuiau separate. inteleg. dar n-am avut timp
+#include "Coleg.h"
+#include "Cunoscut.h"
+#include "Prieten.h"
 
 int main() {
     Agenda a;

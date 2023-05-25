@@ -129,14 +129,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Agenda.cpp" />
+    <ClCompile Include="Coleg.cpp" />
     <ClCompile Include="Contact.cpp" />
-    <ClCompile Include="ContactTypes.cpp" />
+    <ClCompile Include="Cunoscut.cpp" />
     <ClCompile Include="lab12.cpp" />
+    <ClCompile Include="Prieten.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agenda.h" />
+    <ClInclude Include="Coleg.h" />
     <ClInclude Include="Contact.h" />
-    <ClInclude Include="ContactTypes.h" />
+    <ClInclude Include="ContactType.h" />
+    <ClInclude Include="Cunoscut.h" />
+    <ClInclude Include="Prieten.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

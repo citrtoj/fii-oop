@@ -21,10 +21,16 @@
     <ClCompile Include="Contact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ContactTypes.cpp">
+    <ClCompile Include="Agenda.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Agenda.cpp">
+    <ClCompile Include="Coleg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Prieten.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cunoscut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,10 +38,19 @@
     <ClInclude Include="Contact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ContactTypes.h">
+    <ClInclude Include="Agenda.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Agenda.h">
+    <ClInclude Include="ContactType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Prieten.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Coleg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cunoscut.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
